@@ -20,9 +20,13 @@
 </head>
 
 <body>
+
   <!-- FEEDBACK -->
   <span
-    class="text-sm rounded-sm bg-[#1E306E] cursor-pointer px-2 pt-2 pb-4 text-white -rotate-90 translate-x-6 fixed z-10 right-0 top-[40%] hover:translate-x-5 hover:shadow-xl transition-all duration-150 ease-in">Feedback</span>
+    class="text-sm rounded-sm bg-[#1E306E] cursor-pointer px-2 pt-2 pb-4 text-white -rotate-90 translate-x-6 fixed z-10 right-0 top-[40%] hover:translate-x-5 hover:shadow-xl transition-all duration-150 ease-in">
+    Feedback
+  </span>
+
   <!-- HEAD -->
   <div class=" flex items-center justify-between py-8 md:py-4 px-6 bg-[#1E306E] text-white ">
     <a href="#" class="hover:text-[#979FBC] hidden md:flex items-center gap-1 ">
@@ -36,7 +40,8 @@
       <span>Find a Store</span>
     </a>
   </div>
-  <!-- LARGE NAV -->
+
+  <!----------------------------------------------------------- LARGE NAV -->
   <nav class="flex justify-between pl-8 pr-4 py-2 sticky top-0 bg-[#FFF] z-10" id="navbar">
     <!-- HAMBURGER MENU ICON -->
     <i class="menuButton material-symbols-outlined cursor-pointer text-3xl grid place-items-center md:hidden">
@@ -44,17 +49,17 @@
     </i>
     <a href="#"><img src="./assets/logo.svg" alt="logo" class="cursor-pointer" /></a>
     <ul class="items-center gap-8 hidden md:flex ">
-      <a href="#">Mattresses</a>
-      <a href="#">Bundle & Save</a>
-      <a href="#">Pillows</a>
-      <a href="#">Furniture</a>
-      <a href="#">Beddig</a>
-      <a href="#">Accessories</a>
+      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-1" >Mattresses</a>
+      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-2" >Bundle & Save</a>
+      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-3" >Pillows</a>
+      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-4" >Furniture</a>
+      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-5" >Beddig</a>
+      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-6" >Accessories</a>
       <a href="#" class="text-red-500">Sale</a>
     </ul>
     <a href="#" class="material-symbols-outlined text-3xl grid place-items-center">shopping_cart</a>
   </nav>
-  <!-- MOBILE NAV -->
+  <!------------------------------------------------------------- MOBILE NAV -->
   <nav id="mobileNav"
     class=" bg-white hidden h-screen  overflow-auto  fixed top-0 left-0 bottom-0 right-0 w-full z-10 ">
     <!-- LOGO Container -->
@@ -106,12 +111,13 @@
 
   </nav>
 
-  <!-- HERO -->
+  <!------------------------------------------------------------- HERO -->
   <section
     class="bg-[url('./assets/hero.webp')] h-[30vh] md:h-[50vh] lg:h-[70vh] bg-cover bg-center grid place-items-center">
     <h1 class="text-6xl font-semibold text-center text-white font-bold">Sleep on it with a risk-free trial</h1>
   </section>
-  <!-- 100 Night TRIAL SECTION -->
+
+  <!------------------------------------------------------------- 100 Night TRIAL SECTION -->
   <section class="px-4 text-[#1E306E] text-center space-y-8 mt-8 mb-16">
     <h2 class="text-5xl">100 night trial for mattresses</h2>
     <div class="text-sm space-y-4 leading-relaxed transition-all duration-300 ">
@@ -124,8 +130,7 @@
     </div>
   </section>
 
-
-  <!-- billboard / mattress returns Section -->
+  <!------------------------------------------------------------- billboard / mattress returns Section -->
   <section
     class="billboard bg-[#EBF5FB] md:bg-transparent w-full md:flex mt-56 md:mt-16  px-16 overflow-visible md:overflow-hidden  items-center justify-start gap-8 my-16">
     <div class="background-shift hidden md:block "></div>
@@ -171,7 +176,8 @@
 
   <!-- DIVIDER -->
   <div class="h-[60px] w-full"></div>
-  <!-- 30 night trial for other snooze supplies SECTION -->
+
+  <!------------------------------------------------------------- 30 night trial for other snooze supplies SECTION -->
   <section class="text-[#1E306E]">
     <div class="text-center space-y-10">
       <h2 class="text-5xl">30 night trial for other snooze supplies</h2>
@@ -253,24 +259,28 @@
       </div>
     </div>
   </section>
+
   <!-- DIVIDER -->
   <div class="h-[60px] w-full"></div>
-  <!-- Other return policies SECTION -->
-  <section
-    class="bg-[#F6F6F6] shadow-2xl my-8 text-[#1E306E] flex items-center md:items-start flex-col md:flex-row p-16  ">
 
-    <h3 class="font-semibold text-lg md:w-[40%] ">Other return policies
+
+  <!------------------------------------------------------------- Other return policies SECTION -->
+  <section
+    class="bg-[#F6F6F6] shadow-xl my-8 text-[#1E306E] flex items-center md:items-start flex-col md:flex-row p-16  ">
+
+    <h3 class="font-semibold text-3xl md:w-[60%] py-4 ">Other return policies
     </h3>
     <!-- Accordians Container -->
     <div class="accordionWrapper w-full  ">
       <!-- Accordion 1 -->
-      <div class="accordionItem px-4">
-        <div class="w-full flex justify-between items-center  cursor-pointer">
+      <div class="accordionItem   ">
+        <div class="w-full flex justify-between items-center py-4   cursor-pointer">
           <h4 class="accordionItemHeading font-semibold text-lg  hover:translate-x-4 transition-all duration-300">
             Return Procedures</h4>
           <i class="accordionIcon material-symbols-outlined text-2xl transition-all duration-300 ">add</i>
         </div>
-        <p class=" accordionClose accordionItemContent overflow-hidden transition-all duration-300">
+        <p
+          class="accordionClose accordionItemContent text-sm leading-relaxed overflow-hidden transition-all duration-300">
           Mattress: If you want to return your Casper mattress, we would be happy to arrange a return pick-up after the
           30-Night Adjustment Period if the mattress is within the applicable Product’s Trial Period, please e-mail
           Casper at support@casper.com to arrange a return pick-up.
@@ -296,62 +306,69 @@
       </div>
       <!-- Accordion 2 -->
       <div class="accordionItem">
-        <div class="w-full flex justify-between items-center px-4 py-4  cursor-pointer">
+        <div class="w-full flex justify-between items-center  py-4  cursor-pointer">
           <h4 class="accordionItemHeading font-semibold text-lg  hover:translate-x-4 transition-all duration-300">
             Casper products marked as Final Sale</h4>
           <i class="accordionIcon material-symbols-outlined text-2xl transition-all duration-300 ">add</i>
         </div>
-        <p class=" accordionClose accordionItemContent overflow-hidden transition-all duration-300">
+        <p
+          class=" accordionClose accordionItemContent text-sm leading-relaxed overflow-hidden transition-all duration-300">
           Every retailer has its own return policy, so please reach out to the store you purchased from.
         </p>
       </div>
       <!-- Accordion 3 -->
       <div class="accordionItem">
-        <div class="w-full flex justify-between items-center px-4 py-4  cursor-pointer">
+        <div class="w-full flex justify-between items-center  py-4  cursor-pointer">
           <h4 class="accordionItemHeading font-semibold text-lg  hover:translate-x-4 transition-all duration-300">
             Casper products marked as Final Sale</h4>
           <i class="accordionIcon material-symbols-outlined text-2xl transition-all duration-300 ">add</i>
         </div>
-        <p class=" accordionClose accordionItemContent overflow-hidden transition-all duration-300">
+        <p
+          class=" accordionClose accordionItemContent text-sm leading-relaxed overflow-hidden transition-all duration-300">
           Every retailer has its own return policy, so please reach out to the store you purchased from.
         </p>
       </div>
       <!-- Accordion 4 -->
       <div class="accordionItem">
-        <div class="w-full flex justify-between items-center px-4 py-4  cursor-pointer">
+        <div class="w-full flex justify-between items-center  py-4  cursor-pointer">
           <h4 class="accordionItemHeading font-semibold text-lg  hover:translate-x-4 transition-all duration-300">
             Casper products marked as Final Sale</h4>
           <i class="accordionIcon material-symbols-outlined text-2xl transition-all duration-300 ">add</i>
         </div>
-        <p class=" accordionClose accordionItemContent overflow-hidden transition-all duration-300">
+        <p
+          class=" accordionClose accordionItemContent text-sm leading-relaxed overflow-hidden transition-all duration-300">
           Every retailer has its own return policy, so please reach out to the store you purchased from.
         </p>
       </div>
       <!-- Accordion 5 -->
       <div class="accordionItem">
-        <div class="w-full flex justify-between items-center px-4 py-4  cursor-pointer">
+        <div class="w-full flex justify-between items-center  py-4  cursor-pointer">
           <h4 class="accordionItemHeading font-semibold text-lg  hover:translate-x-4 transition-all duration-300">
             Casper products marked as Final Sale</h4>
           <i class="accordionIcon material-symbols-outlined text-2xl transition-all duration-300 ">add</i>
         </div>
-        <p class=" accordionClose accordionItemContent overflow-hidden transition-all duration-300">
+        <p
+          class=" accordionClose accordionItemContent text-sm leading-relaxed overflow-hidden transition-all duration-300">
           Every retailer has its own return policy, so please reach out to the store you purchased from.
         </p>
       </div>
       <!-- Accordion 6 -->
       <div class="accordionItem">
-        <div class="w-full flex justify-between items-center px-4 py-4  cursor-pointer">
+        <div class="w-full flex justify-between items-center  py-4  cursor-pointer">
           <h4 class="accordionItemHeading font-semibold text-lg  hover:translate-x-4 transition-all duration-300">
             Casper products marked as Final Sale</h4>
           <i class="accordionIcon material-symbols-outlined text-2xl transition-all duration-300 ">add</i>
         </div>
-        <p class=" accordionClose accordionItemContent overflow-hidden transition-all duration-300">
+        <p
+          class=" accordionClose accordionItemContent text-sm leading-relaxed overflow-hidden transition-all duration-300">
           Every retailer has its own return policy, so please reach out to the store you purchased from.
         </p>
       </div>
     </div>
   </section>
-  <!-- Need to make a return with us? Section -->
+
+
+  <!------------------------------------------------------------- Need to make a return with us? Section -->
   <section class="text-center space-y-8 pb-16 text-[#1E306E]">
     <h2 class="text-3xl font-semibold">Need to make a return with us?</h2>
     <p>We&apos;re sad to hear that, but we&apos;re always here to help.</p>
@@ -359,69 +376,129 @@
       class="bg-[#1E306E] text-white px-8 py-4 rounded-md mt-8 hover:opacity-70 transition-all duration-150 ease-in ">Get
       Started</button>
   </section>
-  <!-- FOOTER -->
+
+
+  <!------------------------------------------------------------- FAQ SECTION -->
+  <section
+    class="bg-[#F6F6F6] shadow-2xl mt-8 text-[#1E306E] flex items-center md:items-start flex-col md:flex-row p-16  ">
+
+    <h3 class="font-semibold text-3xl md:w-[60%] py-4 ">Frequently Asked Questions
+    </h3>
+    <!-- Accordians Container -->
+    <div class="accordionWrapper w-full  ">
+      <!-- Accordion 2 -->
+      <div class="accordionItem">
+        <div class="w-full flex justify-between items-center  py-4  cursor-pointer">
+          <h4 class="accordionItemHeading font-semibold text-lg  hover:translate-x-4 transition-all duration-300">
+            Why does your trial period vary by product?
+          </h4>
+          <i class="accordionIcon material-symbols-outlined text-2xl transition-all duration-300 ">add</i>
+        </div>
+        <p
+          class=" accordionClose accordionItemContent text-sm leading-relaxed overflow-hidden transition-all duration-300">
+          Since you’ve likely been sleeping on another mattress every night for the past few years, your body will need
+          time to adjust to your new Casper mattress. We offer an extended trial on these products and recommend
+          spending 100 nights with them, so you can take note of how your sleep improves along the way. Of course, we
+          believe it’s important to test out all of your Casper products in the comfort of your own home.
+        </p>
+      </div>
+      <!-- Accordion 3 -->
+      <div class="accordionItem">
+        <div class="w-full flex justify-between items-center  py-4  cursor-pointer">
+          <h4 class="accordionItemHeading font-semibold text-lg  hover:translate-x-4 transition-all duration-300">
+            Can I return my product at one of your stores?
+          </h4>
+          <i class="accordionIcon material-symbols-outlined text-2xl transition-all duration-300 ">add</i>
+        </div>
+        <p
+          class=" accordionClose accordionItemContent text-sm leading-relaxed overflow-hidden transition-all duration-300">
+          Most of our sleep shops, except our Casper Outlet stores, can accept returns for our smaller products like
+          pillows, bedding, and dog beds. We recommend calling the store ahead of time to ensure that the location can
+          accommodate your return. For mattresses or our larger items like furniture, we’ll send a return partner over
+          to remove the product from your home and either donate it to a local charity or have it recycled. To schedule
+          a pickup, you can reach out to our Customer Experience team at +1 888-498-0003 or support@casper.com.
+        </p>
+      </div>
+      <!-- Accordion 4 -->
+      <div class="accordionItem">
+        <div class="w-full flex justify-between items-center  py-4  cursor-pointer">
+          <h4 class="accordionItemHeading font-semibold text-lg  hover:translate-x-4 transition-all duration-300">
+            How do I start a return or exchange?
+          </h4>
+          <i class="accordionIcon material-symbols-outlined text-2xl transition-all duration-300 ">add</i>
+        </div>
+        <p
+          class="accordionClose accordionItemContent text-sm leading-relaxed overflow-hidden transition-all duration-300">
+          If you decide that your Casper products aren’t right for you within your trial period, we're happy to help
+          troubleshoot or initiate the return process. For smaller items like our bedding, pillows, and dog beds, you
+          can visit our return center. From there, you'll print a prepaid shipping label and drop the box off at UPS.
+          Provided the items are received in donatable condition, we’ll process a full refund once we receive them back
+          at our facility. For larger items like mattresses or furniture, please contact us at our help page. We'll work
+          with you to arrange a pickup through a local charity or recycling partner and refund you in full. Refunds will
+          be credited in the form of your original payment method.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!------------------------------------------------------------- FOOTER -->
   <footer class="grid grid-cols-1 md:grid-cols-2 bg-[#1E306E] text-white p-12 gap-8">
     <!-- LISTS -->
-    <section class="text-sm grid gap-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 ">
+    <section class="text-sm grid gap-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
       <ul class="space-y-3">
         <li class="pb-4"><strong>Products</strong></li>
         <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
+        <li>Pillows</li>
+        <li>Bed Frames</li>
+        <li>Adjustable Bed Frames</li>
+        <li>Sheets</li>
+        <li>Duvets</li>
+        <li>Weighted Blanket</li>
+        <li>Glow Light</li>
+        <li>Dog Bed</li>
       </ul>
       <ul class="space-y-3">
         <li class="pb-4"><strong>Products</strong></li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
+        <li>Twin</li>
+        <li>Twin XL</li>
+        <li>Full</li>
+        <li>Queen</li>
+        <li>King</li>
+        <li>Cal King</li>
+        <li>Size Guide</li>
       </ul>
       <ul class="space-y-3">
         <li class="pb-4"><strong>Products</strong></li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
+        <li>Contact Us</li>
+        <li>FAQ</li>
+        <li>Returns</li>
+        <li>Trial</li>
+        <li>Warranty</li>
+        <li>Financing</li>
+        <li>Protection Plan</li>
       </ul>
       <ul class="space-y-3">
         <li class="pb-4"><strong>Products</strong></li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
+        <li>Our Story</li>
+        <li>Why Casper?</li>
+        <li>Casper Labs</li>
+        <li>Stores</li>
+        <li>Jobs</li>
+        <li>Awards</li>
+        <li>Register My Product</li>
+        <li>Follow Casper</li>
+        <li>Trade & Commercial</li>
       </ul>
       <ul class="space-y-3">
         <li class="pb-4"><strong>Products</strong></li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
-        <li>Mattresses</li>
+        <li>Mattress Quiz</li>
+        <li>Mattress Buying Guide</li>
+        <li>Reviews</li>
+        <li>Clearance Sale</li>
+        <li>Refer & Earn</li>
+        <li>Blog</li>
+        <li>Casper vs Competition</li>
       </ul>
 
     </section>
@@ -463,6 +540,19 @@
   </section>
   <!-- DIVIDER -->
   <div class="h-[20px] w-full"></div>
+
+  <!-- HOVER MENU -->
+  <section class="bg-white shadow-xl">
+    <div class="menuItem hidden" id="menu-item-1" >Mattresses</div>
+    <div class="menuItem hidden" id="menu-item-2" >Bundle & Save</div>
+    <div class="menuItem hidden" id="menu-item-3" >Pillows</div>
+    <div class="menuItem hidden" id="menu-item-4" >Furniture</div>
+    <div class="menuItem hidden" id="menu-item-5" >Bedding</div>
+    <div class="menuItem hidden" id="menu-item-6" >Accessories</div>
+  </section>
+
+
+
   <script src="index.js"></script>
 </body>
 

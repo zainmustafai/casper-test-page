@@ -1,6 +1,53 @@
 const animatedElement = document.querySelectorAll(".slide-in");
 const menuButton = document.querySelector(".menuButton");
 const closeMenuButton = document.querySelector(".closeMenuButton");
+const navbar = document.getElementById("navbar");
+const threshold = 10; // Adjust this value as needed
+const navItems = document.querySelectorAll(".navItem");
+const menuItems = document.querySelectorAll(".menuItem");
+let hoverredMenuItem = "";
+
+function openMenu(e) {
+    const hoverredMenuItem = e.currentTarget;
+    const activeID = hoverredMenuItem.textContent;
+    menuItems.forEach((item) => {
+        if (item.id !== activeID) {
+            item.classList.remove("block");
+            item.classList.add("hidden");
+        }
+    });
+    console.log(hoverredMenuItem);
+    menuItems.forEach((item) => {
+        item.classList.remove("hidden");
+        item.classList.add("block");
+    });
+}
+function closeMenu(e) {
+    menuItems.forEach((item) => {
+        item.classList.remove("block");
+        item.classList.add("hidden");
+    });
+};
+// NAVBAR Hover LINK Functionality
+navItems.forEach((item) => {
+    item.addEventListener("mouseenter", openMenu);
+    item.addEventListener("mouseleave", closeMenu);
+});
+
+// NAVBAR SHADOW Functionality
+function toggleShadow() {
+    if (window.scrollY > threshold) {
+        navbar.classList.add("sticky");
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
+
+// Initial check in case the page starts scrolled down
+toggleShadow();
+// Listen for scroll events to toggle the shadow class
+window.addEventListener("scroll", toggleShadow);
+
 // MENU TOGGLE
 menuButton.addEventListener("click", (e) => {
     const mobileNav = document.querySelector("#mobileNav");
