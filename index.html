@@ -49,12 +49,12 @@
     </i>
     <a href="#"><img src="./assets/logo.svg" alt="logo" class="cursor-pointer" /></a>
     <ul class="items-center gap-8 hidden md:flex ">
-      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-1" >Mattresses</a>
-      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-2" >Bundle & Save</a>
-      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-3" >Pillows</a>
-      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-4" >Furniture</a>
-      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-5" >Beddig</a>
-      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-6" >Accessories</a>
+      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-1">Mattresses</a>
+      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-2">Bundle & Save</a>
+      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-3">Pillows</a>
+      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-4">Furniture</a>
+      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-5">Beddig</a>
+      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-6">Accessories</a>
       <a href="#" class="text-red-500">Sale</a>
     </ul>
     <a href="#" class="material-symbols-outlined text-3xl grid place-items-center">shopping_cart</a>
@@ -445,7 +445,7 @@
   <!------------------------------------------------------------- FOOTER -->
   <footer class="grid grid-cols-1 md:grid-cols-2 bg-[#1E306E] text-white p-12 gap-8">
     <!-- LISTS -->
-    <section class="text-sm grid gap-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+    <section class=" lists text-sm grid gap-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
       <ul class="space-y-3">
         <li class="pb-4"><strong>Products</strong></li>
         <li>Mattresses</li>
@@ -505,10 +505,15 @@
 
     <section>
       <strong class="text-lg">Sign up for the latest snooze</strong><br />
-      <div class="mt-8">
-        <input type="email" placeholder="Email Address" />
-        <button class="">Sign Up</button>
+      <div class="mt-8 flex">
+        <input type="email" placeholder="Email Address"
+          class="flex-grow max-w-md rounded-l-md p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#979FBC]" />
+        <button
+          class="px-4 py-2 rounded-r-md bg-[#979FBC] text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-[#1E306E]">
+          Sign Up
+        </button>
       </div>
+
       <!-- SOCIAL LINKS -->
       <div class="space-x-4 mt-8">
         <a href="#" class=" p-2 h-8 aspect-square border rounded-full fa fa-facebook"></a>
@@ -543,12 +548,12 @@
 
   <!-- HOVER MENU -->
   <section class="bg-white shadow-xl">
-    <div class="menuItem hidden" id="menu-item-1" >Mattresses</div>
-    <div class="menuItem hidden" id="menu-item-2" >Bundle & Save</div>
-    <div class="menuItem hidden" id="menu-item-3" >Pillows</div>
-    <div class="menuItem hidden" id="menu-item-4" >Furniture</div>
-    <div class="menuItem hidden" id="menu-item-5" >Bedding</div>
-    <div class="menuItem hidden" id="menu-item-6" >Accessories</div>
+    <div class="menuItem hidden" id="menu-item-1">Mattresses</div>
+    <div class="menuItem hidden" id="menu-item-2">Bundle & Save</div>
+    <div class="menuItem hidden" id="menu-item-3">Pillows</div>
+    <div class="menuItem hidden" id="menu-item-4">Furniture</div>
+    <div class="menuItem hidden" id="menu-item-5">Bedding</div>
+    <div class="menuItem hidden" id="menu-item-6">Accessories</div>
   </section>
 
 

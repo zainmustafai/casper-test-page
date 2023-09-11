@@ -5,35 +5,6 @@ const navbar = document.getElementById("navbar");
 const threshold = 10; // Adjust this value as needed
 const navItems = document.querySelectorAll(".navItem");
 const menuItems = document.querySelectorAll(".menuItem");
-let hoverredMenuItem = "";
-
-function openMenu(e) {
-    const hoverredMenuItem = e.currentTarget;
-    const activeID = hoverredMenuItem.textContent;
-    menuItems.forEach((item) => {
-        if (item.id !== activeID) {
-            item.classList.remove("block");
-            item.classList.add("hidden");
-        }
-    });
-    console.log(hoverredMenuItem);
-    menuItems.forEach((item) => {
-        item.classList.remove("hidden");
-        item.classList.add("block");
-    });
-}
-function closeMenu(e) {
-    menuItems.forEach((item) => {
-        item.classList.remove("block");
-        item.classList.add("hidden");
-    });
-};
-// NAVBAR Hover LINK Functionality
-navItems.forEach((item) => {
-    item.addEventListener("mouseenter", openMenu);
-    item.addEventListener("mouseleave", closeMenu);
-});
-
 // NAVBAR SHADOW Functionality
 function toggleShadow() {
     if (window.scrollY > threshold) {
@@ -59,33 +30,6 @@ closeMenuButton.addEventListener("click", (e) => {
     mobileNav.classList.remove("block");
     mobileNav.classList.add("hidden");
 });
-
-// SCROLL ANIMATION
-function isElementInView(element) {
-    const rect = element.getBoundingClientRect();
-
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-// Define animatedElement as an array of elements you want to animate
-const animatedElements = document.querySelectorAll(".your-animated-element");
-
-function animateOnScroll() {
-    animatedElements.forEach((element) => {
-        if (isElementInView(element)) {
-            element.classList.add("slide-in-bottom");
-        }
-    });
-}
-
-// Add your animated elements with the class "your-animated-element" here
-
-window.addEventListener("scroll", animateOnScroll);
 
 
 
