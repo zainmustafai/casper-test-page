@@ -1,7 +1,22 @@
-const paragraph = document.querySelector(".animate-on-scroll");
+const animatedElement = document.querySelectorAll(".slide-in");
+const menuButton = document.querySelector(".menuButton");
+const closeMenuButton = document.querySelector(".closeMenuButton");
+// MENU TOGGLE
+menuButton.addEventListener("click", (e) => {
+    const mobileNav = document.querySelector("#mobileNav");
+    mobileNav.classList.remove("hidden");
+    mobileNav.classList.add("block");
+});
+closeMenuButton.addEventListener("click", (e) => {
+    const mobileNav = document.querySelector("#mobileNav");
+    mobileNav.classList.remove("block");
+    mobileNav.classList.add("hidden");
+});
 
-function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
+// SCROLL ANIMATION
+function isElementInView(element) {
+    const rect = element.getBoundingClientRect();
+
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
@@ -10,13 +25,22 @@ function isElementInViewport(el) {
     );
 }
 
-function handleScroll() {
-    if (isElementInViewport(paragraph)) {
-        paragraph.classList.add("open");
-        window.removeEventListener("scroll", handleScroll);
-    }
+// Define animatedElement as an array of elements you want to animate
+const animatedElements = document.querySelectorAll(".your-animated-element");
+
+function animateOnScroll() {
+    animatedElements.forEach((element) => {
+        if (isElementInView(element)) {
+            element.classList.add("slide-in-bottom");
+        }
+    });
 }
-window.addEventListener("scroll", handleScroll);
+
+// Add your animated elements with the class "your-animated-element" here
+
+window.addEventListener("scroll", animateOnScroll);
+
+
 
 // Accordion
 const accordionItem = document.querySelectorAll(".accordionItem");
