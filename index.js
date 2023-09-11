@@ -3,8 +3,7 @@ const menuButton = document.querySelector(".menuButton");
 const closeMenuButton = document.querySelector(".closeMenuButton");
 const navbar = document.getElementById("navbar");
 const threshold = 10; // Adjust this value as needed
-const navItems = document.querySelectorAll(".navItem");
-const menuItems = document.querySelectorAll(".menuItem");
+
 // NAVBAR SHADOW Functionality
 function toggleShadow() {
     if (window.scrollY > threshold) {
@@ -30,6 +29,29 @@ closeMenuButton.addEventListener("click", (e) => {
     mobileNav.classList.remove("block");
     mobileNav.classList.add("hidden");
 });
+
+/** ---------------------------------------------SLIDE ANIMATION */
+// Function to handle slide-in animation
+function slideInOnScroll() {
+    const slideInElements = document.querySelectorAll('.slide-in');
+
+    slideInElements.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        if (elementTop < screenHeight) {
+            element.classList.add('slide-in-active');
+        } else {
+            element.classList.remove('slide-in-active');
+        }
+    });
+}
+
+// Initial check in case elements are already in view
+slideInOnScroll();
+
+// Listen for scroll events to trigger the animation
+window.addEventListener('scroll', slideInOnScroll);
 
 
 

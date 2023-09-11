@@ -42,19 +42,74 @@
   </div>
 
   <!----------------------------------------------------------- LARGE NAV -->
-  <nav class="flex justify-between pl-8 pr-4 py-2 sticky top-0 bg-[#FFF] z-10" id="navbar">
+  <nav class="flex justify-between pl-8 pr-4 py-2 sticky top-0 bg-[#FFF] z-20" id="navbar">
     <!-- HAMBURGER MENU ICON -->
     <i class="menuButton material-symbols-outlined cursor-pointer text-3xl grid place-items-center md:hidden">
       menu
     </i>
     <a href="#"><img src="./assets/logo.svg" alt="logo" class="cursor-pointer" /></a>
     <ul class="items-center gap-8 hidden md:flex ">
-      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-1">Mattresses</a>
-      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-2">Bundle & Save</a>
-      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-3">Pillows</a>
-      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-4">Furniture</a>
-      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-5">Beddig</a>
-      <a href="#" class="navItem text-[#1E306E] " data-menu="menu-item-6">Accessories</a>
+
+      <!-- DROPDOWN MENU -->
+      <div class="dropdown">
+        <a href="#" class="navItem text-[#1E306E] dropbtn">Mattresses</a>
+        <!-- Mattresses MENU -->
+        <section class="dropdown-content">
+          <div class="flex">
+            <div class="">
+              <h2>Mattresses</h2>
+            </div>
+            <div>
+              <img />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- DROPDOWN MENU -->
+      <div class="dropdown">
+        <a href="#" class="navItem text-[#1E306E] dropbtn">Bundle & Save</a>
+        <section class="dropdown-content">
+          <div class="container mx-auto flex">
+            <div class="">
+              <h2>Bundle & Save</h2>
+            </div>
+            <div>
+              <img src="./assets/bundle.png" alt="bundle & save" />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- DROPDOWN MENU -->
+      <div class="dropdown">
+        <a href="#" class="navItem text-[#1E306E] dropbtn">Pillows</a>
+        <div class="dropdown-content">
+          dropdown
+        </div>
+      </div>
+
+      <!-- DROPDOWN MENU -->
+      <div class="dropdown">
+        <a href="#" class="navItem text-[#1E306E] dropbtn">Furniture</a>
+        <div class="dropdown-content">
+          dropdown
+        </div>
+      </div>
+      <!-- DROPDOWN MENU -->
+      <div class="dropdown">
+        <a href="#" class="navItem text-[#1E306E] dropbtn">Beddig</a>
+        <div class="dropdown-content">
+          dropdown
+        </div>
+      </div>
+      <!-- DROPDOWN MENU -->
+      <div class="dropdown">
+        <a href="#" class="navItem text-[#1E306E] dropbtn">Accessories</a>
+        <div class="dropdown-content">
+          dropdown
+        </div>
+      </div>
       <a href="#" class="text-red-500">Sale</a>
     </ul>
     <a href="#" class="material-symbols-outlined text-3xl grid place-items-center">shopping_cart</a>
@@ -120,8 +175,8 @@
   <!------------------------------------------------------------- 100 Night TRIAL SECTION -->
   <section class="px-4 text-[#1E306E] text-center space-y-8 mt-8 mb-16">
     <h2 class="text-5xl">100 night trial for mattresses</h2>
-    <div class="text-sm space-y-4 leading-relaxed transition-all duration-300 ">
-      <p>We believe you should sleep on your mattress to decide if you like it,
+    <div class="slide-in-container text-sm space-y-4 leading-relaxed transition-all duration-300 ">
+      <p class="slide-in">We believe you should sleep on your mattress to decide if you like it,
         and it can take the body 30 nights to
         adjust to a new mattress.</p>
       <p>
@@ -131,56 +186,67 @@
   </section>
 
   <!------------------------------------------------------------- billboard / mattress returns Section -->
-  <section
-    class="billboard bg-[#EBF5FB] md:bg-transparent w-full md:flex mt-56 md:mt-16  px-16 overflow-visible md:overflow-hidden  items-center justify-start gap-8 my-16">
-    <div class="background-shift hidden md:block "></div>
-    <!-- Left -->
-    <div class=" w-full md:w-[40%] text-center -translate-y-44 md:translate-y-0 ">
-      <h1 class="text-3xl w-full md:max-w-sm mx-auto">How do mattress returns work?</h1>
-      <img src="./assets/billboard.jpg" alt="billboard" width="720px" class="md:hidden my-8" />
-      <ul class="px-8 max-w-sm mx-auto space-y-4">
-        <li class="w-full text-left">
-          <span class="material-symbols-outlined">
-            done
-          </span>
-          Your trial begins when your items are delivered. Contact us to initiate your return within your trial.
-        </li>
-        <li class="w-full text-left">
-          <span class="material-symbols-outlined">
-            done
-          </span>
-          We&apos;ll set up a courier to pack up and remove the product on your schedule. (No, you don’t have to squeeze
-          it
-          back in the box.)
-        </li>
-        <li class="w-full text-left">
-          <span class="material-symbols-outlined">
-            done
-          </span>
-          Our team will try their best to donate your product to a charity or recycle it.
-        </li>
-        <li class="w-full text-left">
-          <span class="material-symbols-outlined">
-            done
-          </span>
-          Your original form of payment will be refunded in full.
-        </li>
-      </ul>
-    </div>
-    <!-- RIGHT -->
-    <div class="w-60% py-20 hidden md:block">
-      <img src="./assets/billboard.jpg" alt="billboard" width="720px" />
-    </div>
-  </section>
+  <div class="container mx-auto md:pl-32">
+    <section
+      class="billboard bg-[#EBF5FB] md:bg-transparent w-full md:flex mt-56 md:mt-16  px-8 md:px-16 overflow-visible md:overflow-hidden  items-center justify-start gap-8 my-16">
+      <div class="background-shift hidden md:block "></div>
+      <!-- Left -->
+      <div class=" w-full md:w-[40%] text-center text-[#1E306E] -translate-y-44 md:translate-y-0 ">
+        <h1 class="text-3xl font-semibold w-full md:max-w-sm mx-auto">How do mattress returns work?</h1>
+        <img src="./assets/billboard.jpg" alt="billboard" width="720px" class="md:hidden my-8" />
+        <ul class="px-8 max-w-sm mx-auto space-y-4">
+          <li class="w-full mt-8 text-left flex items-start gap-2">
+            <span class="material-symbols-outlined">
+              done
+            </span>
+            <span>
+              Your trial begins when your items are delivered. Contact us to initiate your return within your trial.
+            </span>
+          </li>
+          <li class="w-full text-left flex items-start gap-2">
+            <span class="material-symbols-outlined">
+              done
+            </span>
+            <span>
+              We&apos;ll set up a courier to pack up and remove the product on your schedule. (No, you don’t have to
+              squeeze
+              it
+              back in the box.)
+            </span>
+          </li>
+          <li class="w-full text-left flex items-start gap-2">
+            <span class="material-symbols-outlined">
+              done
+            </span>
+            <span>
+              Our team will try their best to donate your product to a charity or recycle it.
+            </span>
+          </li>
+          <li class="w-full text-left flex items-start gap-2">
+            <span class="material-symbols-outlined">
+              done
+            </span>
+            <span>
+              Your original form of payment will be refunded in full.
+            </span>
+          </li>
+        </ul>
+      </div>
+      <!-- RIGHT -->
+      <div class="w-60% py-20 hidden md:block">
+        <img src="./assets/billboard.jpg" alt="billboard" width="720px" />
+      </div>
+    </section>
+  </div>
 
 
   <!-- DIVIDER -->
   <div class="h-[60px] w-full"></div>
 
   <!------------------------------------------------------------- 30 night trial for other snooze supplies SECTION -->
-  <section class="text-[#1E306E]">
+  <section class="text-[#1E306E] px-8">
     <div class="text-center space-y-10">
-      <h2 class="text-5xl">30 night trial for other snooze supplies</h2>
+      <h2 class=" text-3xl md:text-5xl">30 night trial for other snooze supplies</h2>
       <p>Get a feel for these products in your bedroom for up to 30 days with free, easy returns.</p>
     </div>
     <!-- GRID -->
